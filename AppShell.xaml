@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="pizzaApplication.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:pizzaApplication"
+    Shell.FlyoutBehavior="Disabled"
+    Title="pizzaApplication"
+    Shell.BackgroundColor="OrangeRed"
+    Shell.TitleColor="#F5DEB3"
+    Shell.DisabledColor="#F5DEB3"
+    Shell.ForegroundColor="#F5DEB3"
+    Shell.TabBarBackgroundColor="#F5DEB3">
+
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>

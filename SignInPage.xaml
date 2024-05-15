@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pizzaApplication.SignInPage"
+             Title="Sign In"
+             BackgroundColor="#F5DEB3">
+
+    <VerticalStackLayout Padding="20" Spacing="20" BackgroundColor="#F5DEB3">
+        <Grid RowSpacing="20" Margin="20,40,0,10" ColumnDefinitions=".45*,.55*" RowDefinitions="*">
+        <Image Source="imgbin_pizza.png"/>
+        <Label Text="Let's sign you in!" Grid.Column="1" FontAttributes="Bold" VerticalOptions="Center" Margin="10" FontSize="24" TextColor="OrangeRed"/>
+        </Grid>
+        <Border StrokeShape="RoundRectangle 10" Padding="5" StrokeThickness="2" Stroke="OrangeRed" BackgroundColor="#FEECCA">
+            <VerticalStackLayout>
+                <Entry x:Name="usernameEntry" Placeholder="Username" TextColor="Black" PlaceholderColor="OrangeRed"/>
+                <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="OrangeRed" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Button Text="Login" Margin="20,10,20,0" Clicked="OnLoginClicked" BackgroundColor="OrangeRed" TextColor="#F5DEB3" CornerRadius="30"/>
+
+
+        <Label Text="Don't have an account? Click here." TextColor="Blue" FontSize="Small" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLabelTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+    </VerticalStackLayout>
+</ContentPage>

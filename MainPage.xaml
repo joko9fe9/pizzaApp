@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pizzaApplication.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout Spacing="10" Padding="0,10,0,10" BackgroundColor="#F5DEB3">
+
+        <CarouselView x:Name="carouselView" HeightRequest="500" VerticalOptions="FillAndExpand" IndicatorView="pizzaIndicator">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,* " RowSpacing="50">
+                        <Image Source="{Binding ImageUrl}" Aspect="AspectFit" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2"/>
+                        <Label Text="{Binding Text}" Margin="20,0,20,0" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="OrangeRed" FontSize="24" FontAttributes="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="pizzaIndicator" HorizontalOptions="Center" Margin="5" IndicatorColor="Orange" SelectedIndicatorColor="OrangeRed"/>
+
+        <Button Text="Sign in" BackgroundColor="OrangeRed" Margin="20,0,20,0"  TextColor="#F5DEB3" CornerRadius="30" Clicked="SignInClicked"/>
+        <Button Text="Register" BackgroundColor="#F5DEB3" Margin="20,0,20,0"  TextColor="OrangeRed" CornerRadius="30" Clicked="RegisterClicked" BorderColor="OrangeRed" BorderWidth="3"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
